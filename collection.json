@@ -1,0 +1,360 @@
+{
+  "info": {
+    "name": "api",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.plantstore.com",
+      "type": "string"
+    },
+    {
+      "key": "token",
+      "value": "",
+      "type": "string"
+    }
+  ],
+  "auth": {
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{token}}",
+        "type": "string"
+      }
+    ],
+    "type": "bearer"
+  },
+  "item": [
+    {
+      "name": "Owner",
+      "item": [
+        {
+          "name": "add",
+          "request": {
+            "description": "Add a new owner as a customer of the store.",
+            "url": {
+              "raw": "{{baseUrl}}/owner",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "owner"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Danny\",\n    \"age\": \"adult\",\n    \"plants\": [\n        {\n            \"id\": \"309e5e64-7c5b-4433-a645-effa0683228e\",\n            \"category\": {\n                \"id\": \"2c1e5e33-6633-400f-8d87-bf4e81506dff\",\n                \"name\": \"Dog\"\n            },\n            \"name\": \"Markley\",\n            \"photoUrls\": {\n                \"smiling\": \"https://scontent-sjc3-1.cdninstagram.com/v/t51.2885-15/168735118_550085559291238_7811318320849179199_n.jpg?stp=dst-jpg_e35&_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=110&_nc_ohc=RGWAh2JjszsAX-h3qUI&tn=lDBuWm7D32pYEQeN&edm=ACWDqb8BAAAA&ccb=7-5&ig_cache_key=MjU0NTYxMTczNDk4ODA5NDA2NA%3D%3D.2-ccb7-5&oh=00_AfAW97yhRaCcWwvBLK7uggaNn4SCt0-qyOZjkzmIvfR7rQ&oe=63C15AB3&_nc_sid=1527a3>\"\n            },\n            \"status\": \"available\"\n        }\n    ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "name": "Owner Not Found Error",
+              "status": "Owner Not Found Error",
+              "code": 400,
+              "originalRequest": {
+                "description": "Add a new owner as a customer of the store.",
+                "url": {
+                  "raw": "{{baseUrl}}/owner",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "owner"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"name\": \"Danny\",\n    \"age\": \"adult\",\n    \"plants\": [\n        {\n            \"id\": \"309e5e64-7c5b-4433-a645-effa0683228e\",\n            \"category\": {\n                \"id\": \"2c1e5e33-6633-400f-8d87-bf4e81506dff\",\n                \"name\": \"Dog\"\n            },\n            \"name\": \"Markley\",\n            \"photoUrls\": {\n                \"smiling\": \"https://scontent-sjc3-1.cdninstagram.com/v/t51.2885-15/168735118_550085559291238_7811318320849179199_n.jpg?stp=dst-jpg_e35&_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=110&_nc_ohc=RGWAh2JjszsAX-h3qUI&tn=lDBuWm7D32pYEQeN&edm=ACWDqb8BAAAA&ccb=7-5&ig_cache_key=MjU0NTYxMTczNDk4ODA5NDA2NA%3D%3D.2-ccb7-5&oh=00_AfAW97yhRaCcWwvBLK7uggaNn4SCt0-qyOZjkzmIvfR7rQ&oe=63C15AB3&_nc_sid=1527a3>\"\n            },\n            \"status\": \"available\"\n        }\n    ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "body": "",
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "_type": "endpoint"
+        },
+        {
+          "name": "delete",
+          "request": {
+            "url": {
+              "raw": "{{baseUrl}}/owner/:ownerId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "owner",
+                ":ownerId"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "ownerId",
+                  "value": ""
+                }
+              ]
+            },
+            "header": [],
+            "method": "POST"
+          },
+          "response": [],
+          "_type": "endpoint"
+        }
+      ],
+      "_type": "container"
+    },
+    {
+      "name": "Plant",
+      "item": [
+        {
+          "name": "add",
+          "request": {
+            "description": "Add a new plant to the store.",
+            "url": {
+              "raw": "{{baseUrl}}/plant",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "plant"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"id\": \"309e5e64-7c5b-4433-a645-effa0683228e\",\n    \"category\": {\n        \"id\": \"2c1e5e33-6633-400f-8d87-bf4e81506dff\",\n        \"name\": \"Fiddle Leaf Fig\"\n    },\n    \"name\": \"Quadi\",\n    \"photoUrls\": {\n        \"growing\": \"https://i.ibb.co/vk5N4C4/EDAA47-FF-6921-41-EE-ABA1-13-DE3-FCDB4-C0-1-105-c.jpg\"\n    },\n    \"status\": \"available\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "name": "Invalid Response Error",
+              "status": "Invalid Response Error",
+              "code": 405,
+              "originalRequest": {
+                "description": "Add a new plant to the store.",
+                "url": {
+                  "raw": "{{baseUrl}}/plant",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "plant"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"id\": \"309e5e64-7c5b-4433-a645-effa0683228e\",\n    \"category\": {\n        \"id\": \"2c1e5e33-6633-400f-8d87-bf4e81506dff\",\n        \"name\": \"Fiddle Leaf Fig\"\n    },\n    \"name\": \"Quadi\",\n    \"photoUrls\": {\n        \"growing\": \"https://i.ibb.co/vk5N4C4/EDAA47-FF-6921-41-EE-ABA1-13-DE3-FCDB4-C0-1-105-c.jpg\"\n    },\n    \"status\": \"available\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "body": "",
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "_type": "endpoint"
+        },
+        {
+          "name": "find",
+          "request": {
+            "url": {
+              "raw": "{{baseUrl}}/plant/:plantId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "plant",
+                ":plantId"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "plantId",
+                  "value": "309e5e64-7c5b-4433-a645-effa0683228e"
+                }
+              ]
+            },
+            "header": [],
+            "method": "GET"
+          },
+          "response": [
+            {
+              "name": "Success",
+              "status": "OK",
+              "code": 200,
+              "originalRequest": {
+                "url": {
+                  "raw": "{{baseUrl}}/plant/:plantId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "plant",
+                    ":plantId"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "plantId",
+                      "value": "309e5e64-7c5b-4433-a645-effa0683228e"
+                    }
+                  ]
+                },
+                "header": [],
+                "method": "GET"
+              },
+              "body": "{\n    \"id\": \"309e5e64-7c5b-4433-a645-effa0683228e\",\n    \"category\": {\n        \"id\": \"2c1e5e33-6633-400f-8d87-bf4e81506dff\",\n        \"name\": \"Fiddle Leaf Fig\"\n    },\n    \"name\": \"Quadi\",\n    \"photoUrls\": {\n        \"growing\": \"https://i.ibb.co/vk5N4C4/EDAA47-FF-6921-41-EE-ABA1-13-DE3-FCDB4-C0-1-105-c.jpg\"\n    },\n    \"status\": \"available\"\n}",
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "name": "Invalid Id Supplied Error",
+              "status": "Invalid Id Supplied Error",
+              "code": 400,
+              "originalRequest": {
+                "url": {
+                  "raw": "{{baseUrl}}/plant/:plantId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "plant",
+                    ":plantId"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "plantId",
+                      "value": "971e5e64-7c5b-0033-a645-bcfe0683000b"
+                    }
+                  ]
+                },
+                "header": [],
+                "method": "GET"
+              },
+              "body": "",
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "name": "Plant Not Found Error",
+              "status": "Plant Not Found Error",
+              "code": 404,
+              "originalRequest": {
+                "url": {
+                  "raw": "{{baseUrl}}/plant/:plantId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "plant",
+                    ":plantId"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "plantId",
+                      "value": "309e5e64-7c5b-4433-a645-effa0683228e"
+                    }
+                  ]
+                },
+                "header": [],
+                "method": "GET"
+              },
+              "body": "",
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "_type": "endpoint"
+        },
+        {
+          "name": "delete",
+          "request": {
+            "url": {
+              "raw": "{{baseUrl}}/plant/:plantId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "plant",
+                ":plantId"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "plantId",
+                  "value": "309e5e64-7c5b-4433-a645-effa0683228e"
+                }
+              ]
+            },
+            "header": [],
+            "method": "DELETE"
+          },
+          "response": [
+            {
+              "name": "Success",
+              "status": "OK",
+              "code": 200,
+              "originalRequest": {
+                "url": {
+                  "raw": "{{baseUrl}}/plant/:plantId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "plant",
+                    ":plantId"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "plantId",
+                      "value": "309e5e64-7c5b-4433-a645-effa0683228e"
+                    }
+                  ]
+                },
+                "header": [],
+                "method": "DELETE"
+              },
+              "body": "",
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "_type": "endpoint"
+        }
+      ],
+      "_type": "container"
+    }
+  ]
+}
