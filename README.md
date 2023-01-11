@@ -2,9 +2,7 @@
 
 This repository contains a [Postman Collection](/collection.json) for the [Plant Store API](https://github.com/fern-api/plantstore-openapi).
 
-## How can I use the Postman Collection?
-
-[Join our Postman Workspace](https://www.postman.com/fern-api/workspace/fern-plantstore). When the API is updated, the Workspace will auto-update.
+[![Open in Postman](https://run.pstmn.io/button.svg)](https://www.postman.com/fern-api/workspace/plant-store)
 
 ## What is a Postman Collection?
 
