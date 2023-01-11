@@ -1,6 +1,6 @@
 # Plant Store API Postman Collection
 
-This repository contains a [Postman Collection](/collection.json) for the [Plant Store API](https://github.com/fern-api/plantstore-openapi).
+This repository contains a [Postman Collection](/collection.json) for the [Plant Store API](https://github.com/fern-api/plantstore-api).
 
 [![Open in Postman](https://run.pstmn.io/button.svg)](https://www.postman.com/fern-api/workspace/plant-store)
 
