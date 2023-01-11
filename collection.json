@@ -1,6 +1,6 @@
 {
   "info": {
-    "name": "api",
+    "name": "Plant Store",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "variable": [
@@ -30,7 +30,7 @@
       "name": "Owner",
       "item": [
         {
-          "name": "add",
+          "name": "Add an owner",
           "request": {
             "description": "Add a new owner as a customer of the store.",
             "url": {
@@ -93,7 +93,7 @@
           "_type": "endpoint"
         },
         {
-          "name": "delete",
+          "name": "Delete an owner",
           "request": {
             "url": {
               "raw": "{{baseUrl}}/owner/:ownerId",
@@ -125,7 +125,7 @@
       "name": "Plant",
       "item": [
         {
-          "name": "add",
+          "name": "Add a plant",
           "request": {
             "description": "Add a new plant to the store.",
             "url": {
@@ -188,7 +188,7 @@
           "_type": "endpoint"
         },
         {
-          "name": "find",
+          "name": "Find plant by ID",
           "request": {
             "url": {
               "raw": "{{baseUrl}}/plant/:plantId",
@@ -299,7 +299,7 @@
           "_type": "endpoint"
         },
         {
-          "name": "delete",
+          "name": "Delete plant by ID",
           "request": {
             "url": {
               "raw": "{{baseUrl}}/plant/:plantId",
