@@ -113,7 +113,7 @@
               ]
             },
             "header": [],
-            "method": "POST"
+            "method": "DELETE"
           },
           "response": [],
           "_type": "endpoint"
