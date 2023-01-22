@@ -264,7 +264,7 @@
                 "header": [],
                 "method": "GET"
               },
-              "body": "",
+              "body": "{\n    \"id\": \"309e5b94-7a5b-4433-a645-effa0699928a\",\n    \"message\": \"This PlantID doesn't match any ID in our system.\"\n}",
               "_postman_previewlanguage": "json"
             },
             {
